@@ -18,7 +18,7 @@ Metacello new
 ```
 
 ## `TtObjectEncoder`
-The `TtObjectEncoder` which should be executed from a regular Pharo 10 image, allows code (either a Class or a single CompiledMethod) to be exported as an encoded file. This encoded file can be read in by the 'dynamic' tiny image of [TinyBootstrap](https://github.com/ErikOnBike/TinyBootstrap). This allows executing and installing code into this image dynamically. See some examples below.
+The `TtObjectEncoder` which should be executed from a regular Pharo 10 image, allows code (either a Class or a single CompiledMethod) to be exported as an encoded file. This encoded file can be read in by the 'dynamic' tiny image of [TinyBootstrap](https://github.com/ErikOnBike/TinyBootstrap/blob/main/README.md#dynamic-image). This allows executing and installing code into this image dynamically. See some examples below.
 
 To create installable code use one of the following class methods to create or append code to a file:
 * `#writeClass:to:` or `#appendClass:to:`
@@ -38,7 +38,7 @@ To load the `test1` class method of `TtDynamic` into the dynamic image, the foll
 TtObjectEncoder writeMethod: (TtDynamic class >> #test1) to: 'test1.code'.
 ```
 
-Now loading these pieces of code into a dynamic image, perform the followin steps (see also [Dynamic image](https://github.com/ErikOnBike/TinyBootstrap/edit/main/README.md#dynamic-image) creation).
+Now loading these pieces of code into a dynamic image, perform the followin steps (see also [Dynamic image](https://github.com/ErikOnBike/TinyBootstrap/blob/main/README.md#dynamic-image) creation).
 * Create the dynamic image:
   ```bash
   ./tiny-bootstrap.sh -a 64 -s ./dynamic/src -t dynamic.image -c "TtDynamic doIt"
