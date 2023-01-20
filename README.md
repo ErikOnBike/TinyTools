@@ -22,8 +22,8 @@ The `TtObjectEncoder` which should be executed from a regular Pharo 10 image, al
 
 To create installable code use one of the following class methods to create or append code to a file:
 * `#writeClass:to:` or `#appendClass:to:`
-* `writeClass:selectMethods:to: or `#appendClass:selectMethods:to:`
-* `writeMethod:to:` or `#appendMethod:to:`
+* `#writeClass:selectMethods:to:` or `#appendClass:selectMethods:to:`
+* `#writeMethod:to:` or `#appendMethod:to:`
 
 The append methods allow multiple pieces of code to be written to the same file. This allows a sort of code bundle to be created. The order is not important.
 
